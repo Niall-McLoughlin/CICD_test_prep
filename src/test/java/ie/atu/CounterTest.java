@@ -20,6 +20,18 @@ class CounterTest {
      assertEquals(1, myCount.increment());
     }
 
+    @Test
+    void testDecrement()
+    {
+        assertEquals(-1, myCount.decrement());
+    }
+
+    @Test
+    void testConstructor()
+    {
+        Exception exMessage =  assertThrows(IllegalArgumentException.class, () -> { new Counter(4);});
+        assertEquals("This is not a valid number", exMessage.getMessage());
+    }
 
     @AfterEach
     void tearDown() {
