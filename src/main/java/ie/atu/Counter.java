@@ -9,7 +9,7 @@ public class Counter {
         countValue++;
         return countValue;
     }
-
+//increment method
     public int decrement(){
         countValue--;
         return countValue;
